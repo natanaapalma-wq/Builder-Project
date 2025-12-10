@@ -13,7 +13,7 @@ Functionality is demonstrated through the videos provided in the `/Media` folder
 The goal is to showcase:
 
 - C++ engineering ability  
-- Architecture design quality (SOLID, Clean Architecture, DDD-inspired organization)  
+- Architecture design quality (SOLID, Clean Architecture)  
 - Real-time procedural geometry logic  
 - Code clarity, maintainability, and large-system design  
 
