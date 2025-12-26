@@ -95,7 +95,7 @@ void AFloorGrid::HandleClick(EditTool tool, const FVector& world_point, bool is_
     
   default:
     if (debug) {
-      log_->Warning("GridSystem", "Unhandled tool type: %d", 
+      log_->Warning("GridSystem", "Unhandled tool type: {0}", 
       static_cast<int32>(tool));}
     break;
     
