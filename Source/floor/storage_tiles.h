@@ -20,7 +20,7 @@ class BaseGridCalculator;
  * 3. Optimized performance through precomputed data
  * 4. Easier debugging and testing
  */
-class GAMEBUILDMODE_API GridTileData {
+class GAMEBUILDMODE_API StorageGridData {
 public:
   GridTileData(
     BaseGridCalculator* calculator,
