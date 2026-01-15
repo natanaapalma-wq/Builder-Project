@@ -10,6 +10,7 @@
 #include "grid/wall/interactions.h"
 #include "object_interactions.h"
 #include "storage_tiles.h"
+#include "room_manager.h"
 
 using namespace data_floor_grid;
 
