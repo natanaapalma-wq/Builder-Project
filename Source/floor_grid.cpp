@@ -11,7 +11,7 @@
 #include "grid/floor/object_interactions.h"
 #include "storage_tiles.h"
 
-using namespace grid_data;
+using namespace data_floor_grid;
 
 AFloorGrid::AFloorGrid()
     : build_mode_manager_(nullptr)
@@ -61,19 +61,19 @@ void AFloorGrid::InitializeComponents() {
 
   click_ = TMakeUnique<GridClick>(calculate_);
 
-  wall_interactions_ = TMakeUnique<GridWallInteractions>(
+  wall_interactions_ = MakeUnique<GridWallInteractions>(
     this, click_.Get(), tiles_data_.Get()
   );
 
-  object_interactions_ = TMakeUnique<GridObjectInteractions>(
+  object_interactions_ = MakeUnique<GridObjectInteractions>(
     this, click_.Get(), tiles_data_.Get()
   );
 
-  pathfinder_ = TMakeUnique<GridPathFinder>(
+  pathfinder_ = MakeUnique<GridPathFinder>(
     this, click_.Get(), tiles_data_.Get()
   );
 
-  rooms_manager_ = TMakeUnique<RoomsManager>(
+  rooms_manager_ = MakeUnique<RoomsManager>(
     this, click_.Get(), tiles_data_.Get()
   );
 
