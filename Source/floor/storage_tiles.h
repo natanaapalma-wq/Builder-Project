@@ -23,7 +23,7 @@ class BaseGridCalculator;
 class GAMEBUILDMODE_API StorageGridData {
 public:
   GridTileData(
-    BaseGridCalculator* calculator,
+    BaseGridCalculator* calculate_,
     float floor_height,
     FIntPoint grid_size,
     FVector world_position,
@@ -91,7 +91,7 @@ private:
   void InitializeTileCorners();
 
   //     --- GRID DEFINITIONS ---
-  const BaseGridCalculator* kCalculate;
+  BaseGridCalculator* calculate_;
   const float kTileSize = 50.f;
   const float kHalfTileSize = 25.f;
   const FIntPoint kSize;
