@@ -49,7 +49,7 @@ void AFloorGrid::Initialize(grid_calculator_enum::Lot lot_key, float floor_heigh
     return;
   }
 
-  tiles_data_ = TMakeUnique<GridTileData>(calculate_, floor_height);
+  tiles_data_ = MakeUnique<GridTileData>(calculate_, floor_height);
 
   // - Z axis is not pre calculated by the gridCalculator, 
   // which allows to simulate various floors with a single calculator
@@ -63,19 +63,19 @@ void AFloorGrid::InitializeComponents() {
   click_ = TMakeUnique<GridClick>(calculate_);
 
   wall_interactions_ = MakeUnique<GridWallInteractions>(
-    this, click_, tiles_data_
+    this, click_.Get(), tiles_data_.Get()
   );
 
   object_interactions_ = MakeUnique<GridObjectInteractions>(
-    this, click_, tiles_data_,
+    this, click_.Get(), tiles_data_.Get(),
   );
 
   pathfinder_ = MakeUnique<GridPathFinder>(
-    this, click_, tiles_data_
+    this, click_.Get(), tiles_data_.Get()
   );
 
   rooms_manager_ = MakeUnique<RoomsManager>(
-    this, click_, tiles_data_
+    this, click_.Get(), tiles_data_.Get()
   );
 
 }
