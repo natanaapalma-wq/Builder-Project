@@ -51,7 +51,7 @@ public:
 	// It's needed to be initialized manually.
 	void Initialize(grid_calculator_enum::Lot lot_key, float floor_height);
 
-	void HandleClick(EditTool tool, const FVector& world_point, bool is_pressed);
+	void HandleClick(EditTool tool, const FVector& world_point, bool is_pressed) const;
 
 	UProceduralMeshComponent* CreateAndAttachProceduralMesh();
 
