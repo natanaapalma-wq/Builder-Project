@@ -43,7 +43,7 @@ void AFloorGrid::Initialize(grid_calculator_enum::Lot lot_key, float floor_heigh
   calculate_ = build_mode_manager_->LotGridCalculator(lot_key);
     
   if (calculate_ == nullptr) {
-    Info("ERROR FloorGrid", "Failed to get grid calculator for lot key: {0}", 
+    Info("ERROR FloorInstance", "Failed to get grid calculator for lot key: {0}", 
       static_cast<int32>(lot_key));
     return;
   }
@@ -96,7 +96,7 @@ void AFloorGrid::HandleClick(EditTool tool, const FVector& world_point, bool is_
     
   default:
     if (debug) {
-      Info("WARNING GridSystem", "Unhandled tool type: {0}", 
+      Info("WARNING FloorInstance", "Unhandled tool type: {0}", 
       static_cast<int32>(tool));}
     break;
     
