@@ -65,6 +65,17 @@ protected:
 
 private:
 
+	template<typename... Types>
+	void Info(
+		const FString& category, 
+		const FString& format, 
+		Types... args
+		){
+		
+		if (!debug) return;
+		Log::Infof(category, format, args...);
+	}
+
 	void InitializeComponents();
 
 	// Core systems
