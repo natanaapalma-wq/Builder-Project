@@ -36,7 +36,7 @@ AFloorGrid::AFloorGrid()
 
 void AFloorGrid::Initialize(grid_calculator_enum::Lot lot_key, float floor_height) {
   
-  if (debug) log_->Info("Grid", "StartGrid!");
+  Info("Grid", "StartGrid!");
 
   // Here we get the specilized calculator for this grid, the calculator holds the size (example: 64x64)
   // and also contains the world offset and world rotation
