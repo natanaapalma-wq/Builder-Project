@@ -29,12 +29,7 @@ public:
 
   bool debug;
 
-  GridWallInteractions(
-    BaseGridCalculator* calculator,
-    AFloorGrid* grid,
-    GridClick* click,
-    StorageGridData* tiles_data
-  );
+  GridWallInteractions(AFloorGrid* grid);
 
   /**
   * Processes wall placement interaction.
