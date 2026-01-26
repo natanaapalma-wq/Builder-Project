@@ -23,11 +23,8 @@ class BaseGridCalculator;
 class GAMEBUILDMODE_API StorageGridData {
 public:
   GridTileData(
-    BaseGridCalculator* calculate_,
-    float floor_height,
-    FIntPoint grid_size,
-    FVector world_position,
-    FRotator world_rotation
+    AFloorGrid* floor,
+    float floor_height
   );
 
   // ====================
